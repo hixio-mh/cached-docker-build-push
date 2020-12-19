@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "@actions/exec": "^1.0.1",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "@actions/core": "^1.2.0",
