@@ -10,7 +10,8 @@
   ],
   "dependencies": {
     "@actions/exec": "^1.0.1",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@actions/core": "^1.2.0",
@@ -23,7 +24,9 @@
   "scripts": {
     "build": "ncc build src/index.js -o dist",
     "test": "jest",
-    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -34,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/devmasx/cached-docker-build-push/issues"
   },
-  "homepage": "https://github.com/devmasx/cached-docker-build-push#readme"
+  "homepage": "https://github.com/devmasx/cached-docker-build-push#readme",
+  "snyk": true
 }
